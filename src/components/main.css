@@ -1,0 +1,45 @@
+.myheader {
+    background-color: white;
+}
+.mybut {
+    border: none;
+    padding: 8px 15px;
+    margin-right: 35px;
+    margin-left: 35px;
+    transition: 0.3s all ease;
+}
+
+.mybut:hover {
+    transition: 0.3s all ease;
+    background-color:#006edc;
+    color:white;
+}
+
+.mybut:active {
+    transition: 0.2s all ease;
+    transform: scale(0.95);
+}
+
+.title-shop {
+    background-color: #e9ecef;
+    text-align:center;
+}
+
+.add-but {
+    border: none;
+    padding: 8px 15px;
+    transition: 0.3s all ease;
+}
+.add-but:hover {
+    transition: 0.3s all ease;
+    background-color:#006edc;
+    color:white;
+}
+.add-but:active {
+    transition: 0.2s all ease;
+    transform: scale(0.95);
+}
+
+.price {
+    font-size: 18px;
+}
