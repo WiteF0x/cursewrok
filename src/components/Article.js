@@ -37,7 +37,7 @@ class Article extends Component {
          <br />
         <button className="add-but">Add +</button><p className="price">Цена: {article.cost} грн.</p> </section>
         return (
-            <div className="card mx-auto" style = {{width: '100%', margin: '20px'}}>
+            <div className="card mx-auto" style = {{width: '100%', margin: '35px'}}>
                 <div className="card-header">
                     <h2>
                     {article.title}
