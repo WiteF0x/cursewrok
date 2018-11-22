@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './main.css'
+// import './test.jpeg'
 
 class Article extends Component {
     constructor(props) {
@@ -28,11 +29,13 @@ class Article extends Component {
         
         const {article, isOpen, onButtonClick} = this.props
         const body = isOpen && <section className="card-text">
+        <p className="subtitle">{article.subtitle}</p>
+        <br />
         {article.text} 
         <br />
-        <img src={article.url}/>
+        <img className="model-photo" alt="error" src={article.url}/>
          <br />
-        <p className="price">Цена: {article.cost} грн.</p> <button className="add-but">Add +</button></section>
+        <button className="add-but">Add +</button><p className="price">Цена: {article.cost} грн.</p> </section>
         return (
             <div className="card mx-auto" style = {{width: '50%', margin: '20px'}}>
                 <div className="card-header">

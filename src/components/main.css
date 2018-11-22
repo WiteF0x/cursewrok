@@ -28,6 +28,8 @@
 .add-but {
     border: none;
     padding: 8px 15px;
+    margin-left: 10px;
+    float:right;
     transition: 0.3s all ease;
 }
 .add-but:hover {
@@ -42,4 +44,26 @@
 
 .price {
     font-size: 18px;
+    float:right;
+    margin-bottom: 0rem;
+    margin-top: 0.4rem;
+}
+
+.model-photo {
+    margin-top: 1rem;
+    width: 150px;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+    transition: 0.3s all ease;
+}
+
+.subtitle:hover {
+    transition: 0.3s all ease;
+    color: #006edc;
 }
