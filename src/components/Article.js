@@ -13,29 +13,31 @@ class Article extends Component {
     componentWillMount() {
         console.log('---', 'mounting')
     }
-    // componentWillReceiveProps(nextProps) {
-    //     if(nextProps.defualtOpen !== this.props.defaultOpen) this.setState({
-    //         isOpen: nextProps.defaultOpen
-    //     })
-    // }
     componentWillUpdate() {
         console.log('---', 'will update')
     }
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return this.state.isOpen !== nextState.isOpen   
-    // }
 
     render() {
-        
         const {article, isOpen, onButtonClick} = this.props
-        const body = isOpen && <section className="card-text">
-        <p className="subtitle">{article.subtitle}</p>
-        <br />
-        {article.text} 
-        <br />
-        <img className="model-photo" alt="error" src={article.url}/>
-         <br />
-        <button className="add-but">Add +</button><p className="price">Цена: {article.cost} грн.</p> </section>
+        const body = isOpen && 
+        <section className="card-text">
+            <p className="subtitle">
+                {article.subtitle}
+            </p>
+            <br />
+                {article.text} 
+            <br />
+            <img className="model-photo" alt="error" src={article.url}/>
+            <br />
+            <button className="add-but" onClick={this.onAddClick} >
+                Add +
+            </button>
+            <p className="price">
+                Цена: 
+                {article.cost} 
+                грн.
+            </p> 
+        </section>
         return (
             <div className="card mx-auto" style = {{width: '100%', margin: '35px'}}>
                 <div className="card-header">
@@ -54,6 +56,15 @@ class Article extends Component {
                 </div>
             </div>
         )
+    }
+
+    onAddClick = () => {
+        //made initialization data localstorage by ms of time
+        var sale = {    
+            title: this.props.article.subtitle,
+            cena: this.props.article.cost,
+        }
+        localStorage.setItem('task0', JSON.stringify(sale))
     }
 
 }

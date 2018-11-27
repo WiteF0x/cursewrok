@@ -3,7 +3,6 @@ import ArticleList from './ArticleList'
 import articles from '../fixtures'
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
-// import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 
