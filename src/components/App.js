@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
 // import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Link } from 'react-router-dom'
 
 class App extends PureComponent {
     state = {
@@ -16,7 +17,7 @@ class App extends PureComponent {
             <div className="container">
                 <div className="myheader jumbotron">
                     <h1 className="title-shop display-4">
-                        MyShop
+                        MyShop <Link to='/bin'>Bin</Link>
                         <br />
                         <button className="btn" onClick = {this.revert}>Revert</button>
                     </h1>

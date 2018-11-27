@@ -2,17 +2,17 @@ import React from 'react'
 import {render} from 'react-dom'
 import App from './components/App'
 // import 'babel-polyfill'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import Bin from './components/Bin'
 
 
 // render(<App/>, document.getElementById('root'))
 render(
-    <Router history={browserHistory}>
-      <Route path='/' component={App}>
-        <IndexRoute component={App} />
-        <Route path='bin' component={Bin} />
-      </Route>
-    </Router>,
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/' component={App}/>
+      <Route path='/bin' component={Bin}/>
+    </Switch>
+  </BrowserRouter>,
     document.getElementById('root')
   )
