@@ -22,7 +22,7 @@ class App extends PureComponent {
                         <button className="btn" onClick = {this.revert}>Revert</button>
                         <br />
                         <hr />
-                        <Link to='/bin'><img className="bin" src="/img/bin.png" /></Link>
+                        <Link to='/bin'><img alt="bin" className="bin" src="/img/bin.png" /></Link>
                     </h1>
                 </div>
                 <ArticleList articles = {this.state.reverted ? articles.slice().reverse() : articles}/>
