@@ -17,9 +17,12 @@ class App extends PureComponent {
             <div className="container">
                 <div className="myheader jumbotron">
                     <h1 className="title-shop display-4">
-                        MyShop <Link to='/bin'>Bin</Link>
+                        MyShop
                         <br />
                         <button className="btn" onClick = {this.revert}>Revert</button>
+                        <br />
+                        <hr />
+                        <Link to='/bin'><img className="bin" src="/img/bin.png" /></Link>
                     </h1>
                 </div>
                 <ArticleList articles = {this.state.reverted ? articles.slice().reverse() : articles}/>

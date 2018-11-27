@@ -67,3 +67,12 @@
     transition: 0.3s all ease;
     color: #006edc;
 }
+
+.bin {
+    width: 100px;
+    margin: 15px 0px 0px 0px;
+}
+
+.jumbotron {
+    margin-bottom: 0rem;
+}
