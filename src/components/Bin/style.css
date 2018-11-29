@@ -7,6 +7,7 @@
 }
 
 .product_li {
+    margin-left: 35px;
     list-style: none;
 }
 
@@ -15,10 +16,41 @@
 }
 
 .product_section {
+    height: 200px;
+    background-color: #F5F5F5;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .title-order {
     text-align:center;
+}
+
+.totalcost {
+    font-size: 26px;
+    text-align: center;
+    color: black;
+}
+
+.cost {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 8px 15px;
+    margin: 0px 35px 35px 35px; 
+    transition: 0.3s all ease;
+}
+
+.btn:hover {
+    transition: 0.3s all ease;
+    background-color:#006edc;
+    color:white;
+}
+
+.btn:active {
+    transition: 0.2s all ease;
+    transform: scale(0.95);
 }

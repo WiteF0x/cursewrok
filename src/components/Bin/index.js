@@ -15,14 +15,15 @@ export default class Bin extends Component {
             }
         }
         ];
-        var totalcost = Number(0);
+        var totalcost = parseInt(0);
         for (var i = 0; i <localStorage.length; i++) {
             arr[i] = localStorage.key(i);
             prod[i] = JSON.parse(localStorage.getItem(arr[i]))
-            totalcost = totalcost + Number(prod[i].cena)
+            totalcost = totalcost + parseInt(prod[i].cena)
         }
         console.log('key massiv: ',arr)
-        console.log('product massiv: ',prod[2].cena)
+        console.log('product massiv: ',prod)
+        console.log('totalcost: ',totalcost)
         const listSales = prod.map((product) =>
             <section key={product.id} className="product_section"> 
                             <li className="product_li title"> 
@@ -36,7 +37,7 @@ export default class Bin extends Component {
                             <li className="product_li cena">
                                 <h4>
                                     <span>Цена: </span>  
-                                    {product.cena}
+                                    {product.cena} грн.
                                 </h4>
                             </li>
             </section>);
@@ -46,15 +47,22 @@ export default class Bin extends Component {
                             <div className="title-order display-4">
                                 Your orders
                                 <br/>
-                                <Link to='/'><img className="home-logo" alt="home" src="/img/home.png" /></Link>
                                 <hr/>
+                                <Link to='/'><img className="home-logo" alt="home" src="/img/home.png" /></Link>
                             </div>
                             <div className="card-body">
-                            <ul>{listSales}</ul>
+                                <ul>{listSales}</ul>
                             </div>
-                        </div>
-                        Общая стоимость: {totalcost}
+                            <div className="totalcost">
+                            <button className="btn" onClick={this.DeteleAllOrders}>Delete all orders</button>
+                            <br/>
+                                <span>Общая стоимость:</span> <span className="cost">{totalcost}</span> грн.
+                            </div>
+                        </div> 
                     </div>
             )
+        }
+        DeteleAllOrders = function() {
+            localStorage.clear()
         }
     }

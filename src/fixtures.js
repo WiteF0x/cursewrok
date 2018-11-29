@@ -5,7 +5,7 @@ export default [
         "title": "Видеокарта",
         "subtitle": "Nvidia Titan V",
         "text": "Графический чип: GeForce GTX 1070 Ti. Обьем памяти: 8 Гб. Разрядность шины памяти: 256 бит. Тип памяти: GDDR5. Тип системы охлаждения: Активная.",
-        "cost": "14 799",
+        "cost": "14799",
         "url": "/img/videocard.jpg"
     },
     {
@@ -14,7 +14,7 @@ export default [
         "title": "Процессор",
         "subtitle": "Intel Core i7-8700K",
         "text": "Семейство процессора: Intel Core i7. Тип разьма: Socket 1151. Поколение процессора Intel: Cofee Lake(восьмое). Количество ядер: 6. Инегрированная графика Intel UHD Graphics 630. Внутренняя тактовая частота: 3700 МГц. Обьем кэш памяти 3 уровня. 12 МБ.",
-        "cost": "7 530",
+        "cost": "7530",
         "url": "/img/core.jpg"
     },
     {
@@ -23,7 +23,7 @@ export default [
         "title": "Кулер",
         "subtitle": "AZZA 3 Hurricane RGB LITE+RF",
         "text": "Размер вентилятора: 120 мм. Тип: Воздушное охлаждение (кулер).",
-        "cost": "1 402",
+        "cost": "1402",
         "url": "/img/cool.jpg"
     },
     {
@@ -32,7 +32,7 @@ export default [
         "title": "HDD",
         "subtitle": "Western Digital Blue 1TB",
         "text": "Емкость накопителя: 1 ТБ. Тип жесткого диска: Внутренний. Форм-фактор: 3.5. Интерфейс: SATAIII. Скорость вращение шпинделя: 7200 об/мин.",
-        "cost": "1 256",
+        "cost": "1256",
         "url": "/img/hdd.jpg"
     },
     {
@@ -41,7 +41,7 @@ export default [
         "title": "Корпус",
         "subtutle": "NZXT H500 Matte Black + Red",
         "text": "Форм-фактор материнской платы: ATX, microATX, Mini-ITX. Тип корпуса: Miditower.",
-        "cost": "2 599",
+        "cost": "2599",
         "url": "/img/body.jpg"
     },
     {
@@ -50,7 +50,7 @@ export default [
         "title": "Оперативная память",
         "subtitle": "HyperX DDR4-2133 8192MB PC4-17000 Fury Black",
         "text": "Обьем памяти: 8 Гб. Тип памяти: DDR4 SDRAM. Частота памяти: 2133 МГц. Схема таймингов памяти: CL14. Количество планок: 1. Назначение: Для настольных ПК.",
-        "cost": "2 422",
+        "cost": "2422",
         "url": "/img/ram.jpg"
     },
     {
