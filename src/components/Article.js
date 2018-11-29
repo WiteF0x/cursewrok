@@ -1,21 +1,20 @@
 import React, {Component} from 'react'
 import './main.css'
-// import './test.jpeg'
 
 class Article extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            
+        
         }
     }
     
-    componentWillMount() {
-        console.log('---', 'mounting')
-    }
-    componentWillUpdate() {
-        console.log('---', 'will update')
-    }
+    // componentWillMount() {
+    //     console.log('---', 'mounting')
+    // }
+    // componentWillUpdate() {
+    //     console.log('---', 'will update')
+    // }
 
     render() {
         const {article, isOpen, onButtonClick} = this.props
@@ -60,11 +59,14 @@ class Article extends Component {
 
     onAddClick = () => {
         //made initialization data localstorage by ms of time
-        var sale = {    
+        var ran = Math.floor(Math.random() * 10000000) + 1;
+        var sale = { 
+            id: ran,   
             title: this.props.article.subtitle,
             cena: this.props.article.cost,
         }
-        localStorage.setItem('task0', JSON.stringify(sale))
+        localStorage.setItem('sale' + ran, JSON.stringify(sale))
+        console.log(sale)
     }
 
 }
