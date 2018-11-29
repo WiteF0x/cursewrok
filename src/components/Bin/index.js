@@ -6,18 +6,20 @@ import 'bootstrap/dist/css/bootstrap.css'
 export default class Bin extends Component {
     render() {
         var arr = [];
-        var sales = [
+        var mass = [
             {
+            sales : {
             title: "",
-            cena: "",
+            cena: ""
+            }
     }
     ]
         for (var i = 0; i < localStorage.length; i++) {
             arr[i] = localStorage.key(i);
-            sales[i].title=JSON.parse(localStorage.getItem(arr[i])).title
-            sales[i].cena=JSON.parse(localStorage.getItem(arr[i])).cena
-            console.log('Наименование: ',sales[i].title)
-            console.log('Цена: ',sales[i].cena)
+            mass[i].sales.title=JSON.parse(localStorage.getItem(arr[i]))
+            // sales[i].cena=JSON.parse(localStorage.getItem(arr[i].cena))
+            console.log('Наименование: ',mass[i].sales.title)
+            // console.log('Цена: ',sales[i].cena)
         }
         // const listSales = mass.map((id) => <li>{id.title}</li>);
             return (
