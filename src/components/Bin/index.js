@@ -10,20 +10,24 @@ export default class Bin extends Component {
         for (var i = 0; i < localStorage.length; i++) {
             arr[i] = localStorage.key(i);
             sales[i]=localStorage.getItem(arr[i])
-            console.log(arr[i].title)
+            console.log(arr[i])
             console.log(sales[i])
         }
-        const listSales = arr.map((id) => <li key={id}>{id}</li>);
+        const listSales = sales.map((id) => <li>{id}</li>);
             return (
                 <div>
                      <div className="container">
                         <div className="jumbotron">
                             <Link to='/'><img className="home-logo" alt="home" src="/img/home.png" /></Link>
                             <ol>{listSales}</ol>
+                            {/* <button onCLick = {this.DeleteCLick}>Delete</button> */}
                         </div>
                     </div>
 
                 </div>
             )
         }
+        // DeleteClick = () => {
+        //     Storage.clear();
+        // }
     }

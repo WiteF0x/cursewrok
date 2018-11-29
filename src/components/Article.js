@@ -65,7 +65,7 @@ class Article extends Component {
             title: this.props.article.subtitle,
             cena: this.props.article.cost,
         }
-        localStorage.setItem('sale' + ran, JSON.stringify(sale))
+        localStorage.setItem(ran, JSON.stringify(sale))
         console.log(sale)
     }
 
