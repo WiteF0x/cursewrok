@@ -20,11 +20,12 @@ export default class Bin extends Component {
             }
     }
     ]
-        for (var i = 0; i <1; i++) {
+        for (var i = 0; i <localStorage.length; i++) {
             arr[i] = localStorage.key(i);
-            mass[i].sales.title=JSON.parse(localStorage.getItem(arr[i])).title
+            console.log('--mas[i]--',mass[i])
+            // mass[i].sales.title=JSON.parse(localStorage.getItem(arr[i])).title
             // sales[i].cena=JSON.parse(localStorage.getItem(arr[i].cena))
-            console.log('Наименование: ',mass[i].sales.title)
+            // console.log('Наименование: ',mass[i].sales.title)
             // console.log('Цена: ',sales[i].cena)
         }
         // const listSales = mass.map((id) => <li>{id.title}</li>);
