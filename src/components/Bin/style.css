@@ -5,3 +5,16 @@
 .jumbotron {
     margin-bottom: 0rem;
 }
+
+.product_li {
+    list-style: none;
+}
+
+.product_li .title {
+    margin-bottom: 100px;
+}
+
+.product_section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

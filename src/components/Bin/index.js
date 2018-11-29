@@ -4,13 +4,6 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default class Bin extends Component {
-    constructor(props) {
-            super(props)
-            this.state = {
-                title:"",
-                cena:""
-            }
-        }
     render() {
         
         var arr = [];
@@ -22,20 +15,38 @@ export default class Bin extends Component {
             }
         }
         ];
+        var totalcost = Number(0);
         for (var i = 0; i <localStorage.length; i++) {
             arr[i] = localStorage.key(i);
             prod[i] = JSON.parse(localStorage.getItem(arr[i]))
-            console.log('Наименование: ', prod[i].title)
+            totalcost = totalcost + Number(prod[i].cena)
         }
         console.log('key massiv: ',arr)
         console.log('product massiv: ',prod)
-        // const listSales = mass.map((id) => <li>{id}</li>);
+        const listSales = prod.map((product) =>
+            <section className="product_section"> 
+                            <li className="product_li title"> 
+                                <h2>
+                                    Наименование товара:
+                                </h2> 
+                                <h4>
+                                    {product.title}
+                                </h4> 
+                            </li>
+                            <li className="product_li cena">
+                                <h4>
+                                    <span>Цена: </span>  
+                                    {product.cena}
+                                </h4>
+                            </li>
+            </section>);
             return (
                      <div className="container">
                         <div className="jumbotron">
                             <Link to='/'><img className="home-logo" alt="home" src="/img/home.png" /></Link>
-                            {/* <ol>{listSales}</ol> */}
+                            <ul>{listSales}</ul>
                         </div>
+                        Общая стоимость: {totalcost}
                     </div>
             )
         }
