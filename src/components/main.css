@@ -71,6 +71,12 @@
 .bin {
     width: 100px;
     margin: 15px 0px 0px 0px;
+    transition: 0.3s all ease;
+}
+.bin:hover {
+    transition: 0.3s all ease;
+    filter: contrast(200%);
+    transform: scale(1.1);
 }
 
 .jumbotron {
